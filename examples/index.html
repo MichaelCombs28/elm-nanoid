@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nanoid example</title>
+  </head>
+  <body>
+    <main></main>
+    <script src="elm.js"></script>
+    <script>
+      const flags = Array.from(
+        window.crypto.getRandomValues(new Uint8Array(21 * 21 * 7))
+      );
+      Elm.Main.init({ node: document.querySelector("main"), flags: flags });
+    </script>
+  </body>
+</html>
